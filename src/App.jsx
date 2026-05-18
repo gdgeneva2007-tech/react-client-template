@@ -10,20 +10,17 @@ import NotFound from './pages/NotFound'
 // import your project pages below:
 // import Dashboard from './pages/Dashboard'
 
-function App() {
+function App(){
   return (
-    // AuthProvider wraps everything so all components
-    // can access auth state via useAuth()
+    //AuthProvider wraps everything so all components 
+    //can access auth state via useAuth()
     <AuthProvider>
       <BrowserRouter>
         <Navbar />
-
-        <main style={{ padding: '1rem' }}>
+        <main style={{padding:'1rem'}}>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-
+            <Route path='/' element={<Home />}/>
+            <Route path='/login' element={<Signup />}/>
             {/* Protected route example: */}
             {/* <Route
               path="/dashboard"
@@ -34,7 +31,7 @@ function App() {
               }
             /> */}
 
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />}/>
           </Routes>
         </main>
       </BrowserRouter>
