@@ -4,8 +4,8 @@
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
-      <p>Replace this with your content.</p>
+      <h1 className="bg-gray-50">Home</h1>
+      <p>Tailwind is working!</p>
     </div>
   )
 }

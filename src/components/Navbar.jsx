@@ -12,26 +12,44 @@ function Navbar() {
   }
 
   return (
-    <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc' }}>
-      <Link to="/" style={{ marginRight: '1rem' }}>
-        Home
-      </Link>
+    <nav className="bg-white border-b border-gray-200 px-6 py-4">
+      <div className="max-w-5xl mx-auto flex justify-between items-center">
+        {/* Brand - change per project */}
+        <Link to="/" className="text-xl font-bold text-indigo-600">
+          App Name
+        </Link>
 
-      {isLoggedIn ? (
-        <>
-          <span style={{ marginRight: '1rem' }}>
-            Hello, {user.firstName}
-          </span>
-          <button onClick={handleLogout}>Logout</button>
-        </>
-      ) : (
-        <>
-          <Link to="/login" style={{ marginRight: '1rem' }}>
-            Login
-          </Link>
-          <Link to="/signup">Sign Up</Link>
-        </>
-      )}
+        <div className="flex items-center gap-4">
+          {isLoggedIn ? (
+            <>
+              <span className="text-sm text-gray-600">
+                Hello, {user.firstName}
+              </span>
+              <button
+                onClick={handleLogout}
+                className="text-sm text-gray-500 hover:text-gray-800 transition"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="text-sm text-gray-600 hover:text-gray-800"
+              >
+                Login
+              </Link>
+              <Link
+                to="/signup"
+                className="text-sm bg-indigo-600 text-white px-4 py-1.5 rounded-lg hover:bg-indigo-700 transition"
+              >
+                Sign Up
+              </Link>
+            </>
+          )}
+        </div>
+      </div>
     </nav>
   )
 }
