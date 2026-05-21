@@ -20,7 +20,8 @@ function App(){
         <main style={{padding:'1rem'}}>
           <Routes>
             <Route path='/' element={<Home />}/>
-            <Route path='/login' element={<Signup />}/>
+            <Route path='/login' element={<Login />}/>
+            <Route path='/signup' element={<Signup />}/>
             {/* Protected route example: */}
             {/* <Route
               path="/dashboard"
